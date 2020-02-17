@@ -1,0 +1,21 @@
+<h1>Items in your Cart</h1>
+
+<% @order_items.each do |c| %>
+
+  <h3><%= c.item.name %></h3>
+  <h5><%= c.item.cost %></h5>
+
+  <%= form_for c, remote: true do |f| %>
+
+    <%= f.hidden_field :item_id, :value => c.item.id %>
+    <%= f.number_field :quantity, :value => c.quantity.to_i %>
+    <%= f.submit "Update Cart "%>
+
+    <%= link_to "Remove Items", order_item_path(c), method: :delete, remote: true%>
+
+  <% end %>
+  <h2>Subtotal: <%= c.total %>$</h2>
+
+<% end %>
+
+<h3>Your current cart value has a subtotal of: <%= current_order.subtotal %>$</h3>

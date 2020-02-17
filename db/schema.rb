@@ -10,16 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2020_02_15_213010) do
-=======
-ActiveRecord::Schema.define(version: 2020_02_16_234259) do
->>>>>>> Cart
+ActiveRecord::Schema.define(version: 2020_02_17_211939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -53,14 +48,27 @@ ActiveRecord::Schema.define(version: 2020_02_16_234259) do
     t.boolean "restricted"
     t.boolean "age_restricted"
     t.string "image"
-=======
-  create_table "carts", force: :cascade do |t|
->>>>>>> Cart
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-<<<<<<< HEAD
+  create_table "order_items", force: :cascade do |t|
+    t.integer "quantity"
+    t.integer "item_id"
+    t.integer "order_id"
+    t.decimal "unit_price"
+    t.decimal "total"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.decimal "subtotal"
+    t.decimal "total"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.integer "rating"
     t.text "comment"
@@ -70,14 +78,4 @@ ActiveRecord::Schema.define(version: 2020_02_16_234259) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-=======
-  create_table "line_items", force: :cascade do |t|
-    t.bigint "cart_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["cart_id"], name: "index_line_items_on_cart_id"
-  end
-
-  add_foreign_key "line_items", "carts"
->>>>>>> Cart
 end

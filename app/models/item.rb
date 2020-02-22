@@ -67,7 +67,7 @@ class Item < ApplicationRecord
       else
         item.update_column('cost', cost_item + (cost_item)*(0.15).round(2))
       end
-    # end
+    end
   end
 
   # checking for subscribed users
@@ -95,5 +95,4 @@ class Item < ApplicationRecord
       s_user_mail_list
     end
   end
-end
 end

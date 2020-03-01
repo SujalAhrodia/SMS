@@ -13,7 +13,7 @@ class Order < ApplicationRecord
       else
         order_status = 0
       end
-      Order.create(:status => order_status, :quantity => item.quantity, :price => item.total_price, :user_id => user.id, :item_id => item.item_id, :name => Item.find(item.item_id).name)
+      Order.create(:status => order_status, :quantity => item.quantity, :price => item.total_price, :user_id => user.id, :item_id => item.item_id, :name => Item.find(item.item_id).name, :user_name => User.find(user.id).name)
     end
   end
 end

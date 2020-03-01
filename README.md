@@ -110,4 +110,6 @@ After signing in with facebook, you need to signup by giving other details as we
 * No mapping of feedback with users
 * Sorting and filtering are not cohesive right now (works independently)
 * Admin can’t edit user’s password
-* After signing in with facebbook, you need to signup by giving other details as well. (We are only fetching your email from the facebook API)
+* After signing in with facebook, you need to signup by giving other details as well. (We are only fetching your email from the facebook API)
+* The "Feedback" has been implemented as "Review" of each item which can be found in the "show" page of each item. So, feedback and reviews are the same, which consits of the comment and rating.
+* The Cart can be found in the individual "show" pages of the items and at the same place will be the "sign up" option for the visitors.

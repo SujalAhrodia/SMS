@@ -121,3 +121,4 @@ After signing in with facebook, you need to signup by giving other details as we
 * After signing in with facebook, you need to signup by giving other details as well. (We are only fetching your email from the facebook API)
 * The "Feedback" has been implemented as "Review" of each item which can be found in the "show" page of each item. So, feedback and reviews are the same, which consits of the comment and rating.
 * The Cart can be found in the individual "show" pages of the items and at the same place will be the "sign up" option for the visitors.
+* The tax on the item has been mentioned in the "show" pages of the items.

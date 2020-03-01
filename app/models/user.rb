@@ -23,7 +23,7 @@ class User < ApplicationRecord
         errors.add(:exp, "Expiration date cannot be in the past")
       end
       if exp.split(/\//)[0].to_i > 12 or exp.split(/\//)[0].to_i < 1
-        errrors.add(:exp, "Please enter a valid date")
+        errors.add(:exp, "Please enter a valid date")
       end
     end
   end

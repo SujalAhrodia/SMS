@@ -18,11 +18,13 @@ class User < ApplicationRecord
 
   def expiration_date_cannot_be_in_the_past
     # taking the month(index 0) and the year(index 1) from the exp to compare and determine its validation
-    if exp.split(/\//)[1].to_i < Date.today.year.to_i%100 or (exp.split(/\//)[1].to_i == Date.today.year.to_i%100 && exp.split(/\//)[0].to_i < Date.today.mon.to_i)
-      errors.add(:exp, "Expiration date cannot be in the past")
-    end
-    if exp.split(/\//)[0].to_i > 12 or exp.split(/\//)[0].to_i < 1
-      errrors.add(:exp, "Please enter a valid date")
+    if not exp.nil?
+      if exp.split(/\//)[1].to_i < Date.today.year.to_i%100 or (exp.split(/\//)[1].to_i == Date.today.year.to_i%100 && exp.split(/\//)[0].to_i < Date.today.mon.to_i)
+        errors.add(:exp, "Expiration date cannot be in the past")
+      end
+      if exp.split(/\//)[0].to_i > 12 or exp.split(/\//)[0].to_i < 1
+        errrors.add(:exp, "Please enter a valid date")
+      end
     end
   end
   def dob_cannot_be_in_the_future

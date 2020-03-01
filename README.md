@@ -106,7 +106,7 @@ After signing in with facebook, you need to signup by giving other details as we
 </details>
 
 <details><summary>Testing</summary>
- * For Rspec testing, one controller and one model are selected. FactoryGirl and Shoulda-matchers gems are used.
+ * For Rspec testing, one controller and one model are selected. FactoryGirl and Shoulda-matchers gems are used.<br>
  * The controller on which tests are written is the Carts controller. For mdoel testing, Review model is used. 
 
 

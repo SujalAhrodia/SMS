@@ -115,6 +115,7 @@ After signing in with facebook, you need to signup by giving other details as we
 
 ## Note
 
+* One-to-one user to credit card mapping.
 * No mapping of feedback with users
 * Sorting and filtering are not cohesive right now (works independently)
 * Admin can’t edit user’s password
